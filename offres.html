@@ -29,7 +29,7 @@
   <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/888/888879.png" type="image/png">
 
-  <!-- CSS (inchangé) -->
+  <!-- CSS -->
   <style>
     body {
       background-image: url('https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg');
@@ -74,7 +74,6 @@
       align-items: center;
       gap: 2vw;
       margin-top: 6vw;
-      animation: pulse 2s infinite;
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
@@ -87,12 +86,6 @@
       width: 6vw;
       height: 6vw;
       fill: white;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
     }
 
     @media (min-width: 768px) {
@@ -108,6 +101,15 @@
       a.button svg {
         width: 24px;
         height: 24px;
+      }
+    }
+
+    /* Supprimer animation et optimiser pour mobile */
+    @media (max-width: 600px) {
+      a.button {
+        animation: none !important;
+        font-size: 16px;
+        padding: 12px 20px;
       }
     }
 
